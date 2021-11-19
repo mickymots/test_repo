@@ -1,0 +1,22 @@
+plugin:
+    name: Portfolio
+    description: 'Enok''s Portfolio'
+    author: Enok
+    icon: oc-icon-book
+    homepage: ''
+permissions:
+    enok.featuredprojects.manage_project:
+        tab: 'enok.featuredprojects::lang.plugin.name'
+        label: 'enok.featuredprojects::lang.project.manage_projects'
+navigation:
+    featured_projects:
+        label: Portfolio
+        url: enok/featuredprojects/projects
+        icon: icon-book
+        permissions:
+            - enok.featuredprojects.manage_project
+        sideMenu:
+            projects:
+                label: Projects
+                url: enok/featuredprojects/projects
+                icon: icon-bookmark

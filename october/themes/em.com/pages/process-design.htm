@@ -1,0 +1,72 @@
+title = "UI Design"
+url = "/process-design"
+layout = "default"
+is_hidden = 0
+robot_index = "index"
+robot_follow = "follow"
+==
+<?php
+function onStart()
+{
+    $this['isDark'] = true;
+}
+?>
+==
+{% partial "mobile-menu" %}
+{% partial "navigation-menu" %}
+{% partial "process-hero" %}
+{% partial "navigation-process" %}
+
+<section class="container-fluid bg--gray">
+    <div class="container content--container">
+        <div class="row">
+            <div class="col-12 text-center">
+                <h2 class="content--step-title h1"><small>Step 4</small> User Interface Design</h2>
+                <i class="icon icon-vector-pen content--icon"></i>
+            </div>
+            <div class="col-md-4 content--info">
+                <span class="content--step-subtext">Tools I like to use include:</span>
+                <ul class="content--tools">
+                    <li>Illustrator</li>
+                    <li>Photoshop</li>
+                    <li>Sketch App</li>
+                    <li>Invision App</li>
+                </ul>
+            </div>
+            <div class="col-md-8 content--about">
+                <h6 class="content--title">High-fidelity Layouts</h6>
+                <p>
+                    After a solid foundation, I proceed into my favorite part of this process: designing. This is where I start putting together actual deliverables.
+                </p>
+                <p>
+                    Normally, I will create style tiles, ui elements, visual assets like icons, illustrations and graphics where necessary.
+                </p>
+                <h6 class="content--title">Interactive Prototype</h6>
+                <p>
+                    After building out the high-fidelity mock-ups in Sketch App, I proceed to present the design as an interactive prototype Invision App for client approval.
+                </p>
+            </div>
+
+            <div class="col-md-12 content--images">
+                <div class="row">
+                    <div class="col-md-6">
+                        <img class="img-fluid d-block mx-auto" src="{{ 'assets/images/screens-inv.png' | theme }}" alt="">
+                    </div>
+                    <div class="col-md-6">
+                        <img class="img-fluid d-block mx-auto" src="{{ 'assets/images/screens-av.png' | theme }}" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section> <!-- /container -->
+
+
+<div class="flexbox-container content--menu">
+    <a href="{{ 'process-prototype'|page }}" class="flex-link btn btn-link hasArrow __left">
+        <span>Previous Step</span>
+    </a>
+    <a href="{{ 'process-code'|page }}" class="flex-link btn btn-link hasArrow __right">
+        <span>Next Step</span>
+    </a>
+</div>

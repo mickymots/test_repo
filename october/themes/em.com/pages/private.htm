@@ -1,0 +1,32 @@
+title = "private"
+url = "/private"
+layout = "default"
+is_hidden = 0
+robot_index = "index"
+robot_follow = "follow"
+
+[session]
+security = "all"
+
+[stripeElementsForm]
+includeStripeJs = 1
+includeCss = 1
+submitButtonLabel = "...Sumbit"
+==
+<div class="container">
+    {% if user %}
+    <h1>Private Session</h1>
+    <p>Hello {{ user.name }}</p>
+    
+    
+    
+    {% component 'stripeElementsForm' %}
+    
+    
+    <a class="btn btn-secondary" data-request="onLogout" data-request-data="redirect: '/login'">Sign out</a>
+
+{% else %}
+    <p>Nobody is logged in</p>
+{% endif %}
+
+</div>

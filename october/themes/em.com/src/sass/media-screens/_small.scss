@@ -1,0 +1,16 @@
+// Small devices (landscape phones, less than 768px)
+@include media-breakpoint-only(sm) {
+  // mobile menu with smaller icons
+  .flexbox-container.mobile-menu {
+    height: 95px;
+    i {
+      &:before { font-size: 25px; }
+      span {
+        margin-top:-10px;
+        font-size: 12px;
+        font-weight: 600;
+        font-style: normal;
+      }
+    }
+  }
+}

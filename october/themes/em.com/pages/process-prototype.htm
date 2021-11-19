@@ -1,0 +1,64 @@
+title = "Prototype"
+url = "/process-prototype"
+layout = "default"
+is_hidden = 0
+robot_index = "index"
+robot_follow = "follow"
+==
+<?php
+function onStart()
+{
+    $this['isDark'] = true;
+}
+?>
+==
+{% partial "mobile-menu" %}
+{% partial "navigation-menu" %}
+{% partial "process-hero" %}
+{% partial "navigation-process" %}
+
+<section class="container-fluid bg--gray">
+    <div class="container content--container">
+        <div class="row">
+            <div class="col-12 text-center">
+                <h2 class="content--step-title h1"><small>Step 3</small> Prototype</h2>
+                <i class="icon icon-app content--icon"></i>
+            </div>
+            <div class="col-md-4 content--info">
+                <span class="content--step-subtext">Tools I like to use include:</span>
+                <ul class="content--tools">
+                    <li>Axure RP</li>
+                    <li>Invision App</li>
+                    <li>Peak User Testing</li>
+                    <li>Google Forms</li>
+                </ul>
+            </div>
+            <div class="col-md-8 content--about">
+                <h6 class="content--title">Wireframing, and Prototyping</h6>
+                <p>
+                    This step allows me to explore and highlight problems in the wireframes on the early stage, without drawing up high-fidelity layouts, while still representing the core functionality.
+                </p>
+                <p>
+                    Then the team and I, test this early prototype live. Which can also be tested by a group of users from the target audience.
+                </p>
+                <p>
+                    This testing is a shortcut to the common waterfall approach, because it reduces costs and resources for future user testing and redesigns after the product has already been deployed.
+                </p>
+            </div>
+
+            <div class="col-md-12 content--images">
+                <img class="img-fluid d-block mx-auto" src="{{ 'assets/images/process-prototype-wireframes.png' | theme }}" alt="">
+            </div>
+        </div>
+    </div>
+</section> <!-- /container -->
+
+
+<div class="flexbox-container content--menu">
+    <a href="{{ 'process-exploration'|page }}" class="flex-link btn btn-link hasArrow __left">
+        <span>Previous Step</span>
+    </a>
+    <a href="{{ 'process-design'|page }}" class="flex-link btn btn-link hasArrow __right">
+        <span>Next Step</span>
+    </a>
+</div>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="60px" height="60px" viewBox="0 0 60 60" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 46.2 (44496) - http://www.bohemiancoding.com/sketch -->
+    <title>vector-pen copy</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
+        <g id="Desktop" transform="translate(-1012.000000, -1040.000000)" stroke-width="2">
+            <g id="Group-5-Copy" transform="translate(763.000000, 996.000000)">
+                <g id="vector-pen-copy" transform="translate(250.000000, 45.000000)">
+                    <g id="Group">
+                        <path d="M9.625,25.875 L25.875,9.625" id="Shape" stroke="#9999A7"></path>
+                        <path d="M32.125,9.625 L48.375,25.875" id="Shape" stroke="#9999A7"></path>
+                        <rect id="Rectangle-path" stroke="#2E2E36" fill="#FF1A55" transform="translate(28.999750, 6.499750) rotate(45.000000) translate(-28.999750, -6.499750) " x="24.5797924" y="2.07979239" width="8.83991522" height="8.83991522"></rect>
+                        <rect id="Rectangle-path" stroke="#2E2E36" transform="translate(51.499750, 28.999500) rotate(45.000000) translate(-51.499750, -28.999500) " x="47.0797924" y="24.5795424" width="8.83991522" height="8.83991522"></rect>
+                        <rect id="Rectangle-path" stroke="#2E2E36" transform="translate(6.500250, 28.999750) rotate(45.000000) translate(-6.500250, -28.999750) " x="2.08029239" y="24.5797924" width="8.83991522" height="8.83991522"></rect>
+                    </g>
+                    <rect id="Rectangle-path" stroke="#2E2E36" fill-opacity="0.4" fill="#8984FA" x="23" y="50" width="15" height="8"></rect>
+                    <path d="M40,40 C40,45.5225 35.5225,50 30,50 C24.4775,50 20,45.5225 20,40 C20,34.4775 30,20 30,20 C30,20 40,34.4775 40,40 Z" id="Shape" stroke="#2E2E36"></path>
+                    <path d="M30,20 L30,36" id="Shape" stroke="#2E2E36"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

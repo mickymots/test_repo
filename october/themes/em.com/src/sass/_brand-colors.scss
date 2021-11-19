@@ -1,0 +1,77 @@
+// Brand Colors
+$brand-action-primary:      #FF1A55 !default;
+$brand-action-secondary:    #BF0E66 !default;
+$brand-primary:             #8984FA !default;
+$brand-secondary:           #5952F9 !default;
+$brand-black:               #101018 !default;
+$brand-black-light:         lighten($brand-black, 10%)  !default;
+$brand-black-lighter:       #2E2E36 !default;
+$brand-text:                #484b89 !default;
+
+// Bootstrap 4.4.1 Variables map
+$primary:                   $brand-action-primary !default;
+$secondary:                 $brand-primary !default;
+
+$gray-dark:                 #373a3c !default;
+$gray:                      #55595c !default;
+$gray-light:                #818a91 !default;
+$gray-lighter:              #eceeef !default;
+$gray-lightest:             #f7f7f9 !default;
+$white:                     #ffffff !default;
+
+
+//BRAND GRADIENT Action
+.brand-gradient {
+  background: $brand-action-primary; /* Old browsers */
+  background: -moz-linear-gradient(to right, $brand-action-secondary 0%, $brand-action-secondary 15%, $brand-action-primary 50%, $brand-action-secondary 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(to right, $brand-action-secondary 0%, $brand-action-secondary 15%, $brand-action-primary 50%, $brand-action-secondary 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to right, $brand-action-secondary 0%, $brand-action-secondary 15%, $brand-action-primary 50%, $brand-action-secondary 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$brand-action-secondary', endColorstr='$brand-action-primary',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+  background-size: 200% auto;
+  background-position: right;
+  border: none !important;
+
+  &.btn:hover {
+    background-position: left;
+  }
+}
+
+//BRAND GRADIENT PRIMARY
+.brand-gradient-secondary {
+  background: $brand-secondary; /* Old browsers */
+  background: -moz-linear-gradient(45deg, $brand-secondary 0%, $brand-primary 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(45deg, $brand-secondary 0%,$brand-primary 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(45deg, $brand-secondary 0%,$brand-primary 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$brand-secondary', endColorstr='$brand-primary',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+  border: none;
+
+  &.btn:hover {
+    background: $brand-secondary; /* Old browsers */
+    background: -moz-linear-gradient(-45deg, $brand-secondary 0%, $brand-primary 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(-45deg, $brand-secondary 0%,$brand-primary 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(-45deg, $brand-secondary 0%,$brand-primary 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$brand-secondary', endColorstr='$brand-primary',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+  }
+}
+
+//BRAND GRADIENT SECONDARY
+.brand-gradient-dark {
+  background: $brand-black; /* Old browsers */
+  background: -moz-linear-gradient(45deg, $brand-black 0%, $brand-black-light 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(45deg, $brand-black 0%, $brand-black-light 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(45deg, $brand-black 0%, $brand-black-light 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$brand-black', endColorstr='$brand-black-light',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+  border: none;
+
+  &.btn:hover {
+    background: $brand-black; /* Old browsers */
+    background: -moz-linear-gradient(-45deg, $brand-black 0%, $brand-black-light 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(-45deg, $brand-black 0%, $brand-black-light 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(-45deg, $brand-black 0%, $brand-black-light 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$brand-black', endColorstr='$brand-black-light',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+  }
+}
+
+.c-primary {
+  color: $brand-primary;
+}

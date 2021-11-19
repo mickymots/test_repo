@@ -1,0 +1,16 @@
+title = "Projects"
+url = "/projects"
+layout = "default"
+is_hidden = 1
+
+[builderList projects]
+modelClass = "Enok\FeaturedProjects\Models\Project"
+scope = "-"
+displayColumn = "title"
+noRecordsMessage = "No records found"
+detailsPage = "project"
+detailsKeyColumn = "slug"
+detailsUrlParameter = "slug"
+pageNumber = "{{ :page }}"
+==
+{% component 'projects' %}

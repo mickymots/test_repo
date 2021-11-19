@@ -1,0 +1,56 @@
+title = "Quality Assurance"
+url = "/process-quality-assurance"
+layout = "default"
+is_hidden = 0
+robot_index = "index"
+robot_follow = "follow"
+==
+<?php
+function onStart()
+{
+    $this['isDark'] = true;
+}
+?>
+==
+{% partial "mobile-menu" %}
+{% partial "navigation-menu" %}
+{% partial "process-hero" %}
+{% partial "navigation-process" %}
+
+<section class="container-fluid bg--gray">
+    <div class="container content--container">
+        <div class="row">
+            <div class="col-12 text-center">
+                <h2 class="content--step-title h1"><small>Step 6</small> Quality Assurance</h2>
+                <i class="icon icon-check-badge content--icon"></i>
+            </div>
+            <div class="col-md-4 content--info">
+                <span class="content--step-subtext">Tools I like to use include:</span>
+                <ul class="content--tools">
+                    <li>Speed Test</li>
+                    <li>GTMetrix</li>
+                    <li>BrowserStack</li>
+                    <li>Google Forms</li>
+                    <li>Hotjar</li>
+                </ul>
+            </div>
+            <div class="col-md-8 content--about">
+                <h6 class="content--title">Testing and Micro Details</h6>
+                <p>
+                    I believe this step is crucial in creating a quality product. Every little detail is accounted for in this step. This is where we validate / test, and clean up the tone of voice and information architecture. This is also a good time to introduce intuitive animations and guided help to assist the end user.
+                </p>
+            </div>
+
+            <div class="col-md-12 content--images">
+                <img class="img-fluid d-block mx-auto" src="{{ 'assets/images/process-qa-testing.png' | theme }}" alt="">
+            </div>
+        </div>
+    </div>
+</section> <!-- /container -->
+
+
+<div class="flexbox-container content--menu">
+    <a href="{{ 'process-code'|page }}" class="flex-link btn btn-link hasArrow __left">
+        <span>Previous Step</span>
+    </a>
+</div>

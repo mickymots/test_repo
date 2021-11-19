@@ -1,0 +1,69 @@
+title = "Code"
+url = "/process-code"
+layout = "default"
+is_hidden = 0
+robot_index = "index"
+robot_follow = "follow"
+==
+<?php
+function onStart()
+{
+    $this['isDark'] = true;
+}
+?>
+==
+{% partial "mobile-menu" %}
+{% partial "navigation-menu" %}
+{% partial "process-hero" %}
+{% partial "navigation-process" %}
+
+<section class="container-fluid bg--gray">
+    <div class="container content--container">
+        <div class="row">
+            <div class="col-12 text-center">
+                <h2 class="content--step-title h1"><small>Step 5</small> Assist in the Product Building</h2>
+                <i class="icon icon-html-five content--icon"></i>
+            </div>
+            <div class="col-md-4 content--info">
+                <span class="content--step-subtext">Tools I like to use include:</span>
+                <ul class="content--tools">
+                    <li>Foundation / Bootstrap</li>
+                    <li>Codekit / Sass / Gulp</li>
+                    <li>jQuery / Angular js</li>
+                    <li>Font-Awesome</li>
+                    <li>Github</li>
+                </ul>
+            </div>
+            <div class="col-md-8 content--about">
+                <h6 class="content--title">Prototype Development</h6>
+                <p>
+                    This step is normally not part of the UX process, but most of the time, I’ve been the front-end developer for many projects’ UI engineering.
+                </p>
+                <p>
+                    But before proceeding to build out the front-end architecture for the product, I consult with the client and development team to decide on frameworks like Foundation, Bootstrap and Angular js. I will then start creating html5/css3/js views or build a functioning style guide of UI elements for the developers to use.
+                </p>
+                <p>
+                    At the end of the day, the development team has the final say in the design because what they build is the actual version the users interact with, thus it is crucial that I work together with the developers to tackle potential UI hiccups.
+                </p>
+            </div>
+
+            <div class="col-md-12 content--images">
+                <div class="row">
+                    <div class="col-12">
+                        <img class="img-fluid d-block mx-auto" src="{{ 'assets/images/process-code.png' | theme }}" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section> <!-- /container -->
+
+
+<div class="flexbox-container content--menu">
+    <a href="{{ 'process-design'|page }}" class="flex-link btn btn-link hasArrow __left">
+        <span>Previous Step</span>
+    </a>
+    <a href="{{ 'process-quality-assurance'|page }}" class="flex-link btn btn-link hasArrow __right">
+        <span>Next Step</span>
+    </a>
+</div>

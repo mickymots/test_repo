@@ -1,0 +1,15 @@
+columns:
+    title:
+        label: 'enok.featuredprojects::lang.project.title'
+        type: text
+        searchable: true
+        sortable: true
+    client_name:
+        label: 'enok.featuredprojects::lang.project.client_name'
+        type: text
+        searchable: true
+        sortable: true
+    slug:
+        label: 'enok.featuredprojects::lang.project.slug'
+        type: text
+        sortable: true

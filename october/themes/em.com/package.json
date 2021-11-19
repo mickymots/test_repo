@@ -1,0 +1,44 @@
+{
+  "name": "npm-scripts",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "config": {
+    "changePath": "./src/sass/*.scss",
+    "srcPath": "./src/sass/main.scss",
+    "assetsPath": "./assets/css/",
+    "proxyURI": "october.test",
+    "tunnel": "october"
+  },
+  "scripts": {
+    "compile:sass": "node-sass $npm_package_config_srcPath  --output $npm_package_config_assetsPath --source-map-embed --output-style-compressed",
+    "watch:sass": "onchange $npm_package_config_changePath -- run-s compile:sass ",
+    "browsersync": "browser-sync start --proxy $npm_package_config_proxyURI --tunnel $npm_package_config_tunnel --files $npm_package_config_assetsPath",
+    "watch": "run-p browsersync watch:sass",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Ben Weiser <bweiser86@gmail.com> (http://benweiser.com/)",
+  "license": "MIT",
+  "devDependencies": {
+    "browser-sync": "^2.26.14",
+    "node-sass": "^4.13.1",
+    "npm-run-all": "^4.1.5",
+    "onchange": "^6.1.0"
+  },
+  "dependencies": {
+    "bootstrap": "^4.4.1",
+    "gulp": "^3.9.0",
+    "gulp-autoprefixer": "^6.1.0",
+    "gulp-bower": "^0.0.15",
+    "gulp-clean-css": "^4.3.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-concat-css": "^3.1.0",
+    "gulp-notify": "^4.0.0",
+    "gulp-order": "^1.2.0",
+    "gulp-sass": "^5.0.0",
+    "gulp-uglify": "^3.0.2",
+    "main-bower-files": "^2.13.3",
+    "run-sequence": "^2.2.1"
+  }
+}

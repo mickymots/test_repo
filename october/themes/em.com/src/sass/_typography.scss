@@ -1,0 +1,99 @@
+@font-face {
+  font-family: "housky";
+  src: url("../fonts/housky.woff") format("woff");
+}
+
+.decoration-text {
+  font-family: 'housky' !important;
+  text-transform: capitalize !important;
+  font-weight: 400;
+  color: $brand-primary;
+}
+
+.decoration-line:after {
+    content: "";
+    display: block;
+    height: $space-micro;
+    width: 36px;
+    background: $brand-action-primary;
+    margin-top: $space-standard;  
+    @include media-breakpoint-down(xs) {
+      margin: $space-small auto;
+    }
+}
+
+// FONT SMOOTHING
+body {
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  -moz-osx-font-smoothing: grayscale;
+  // FONT STYLES
+  p {
+    &.lead { font-size: 1.25rem; }
+    line-height: 1.7rem;
+    color: #525f7f;
+    font-weight: 400;
+  }
+}
+
+// FORMAT PARAGRAPH WITH 75 CPL
+.format-paragraph p {
+  max-width: 79ch;
+  margin: 0 auto;
+}
+.format-paragraph img {
+  @extend .img-fluid;
+}
+
+
+// HEADINGS
+h1,h2,h3,h4,h5,h6 {
+  &:not(.content--title){
+    font-family: trumpgothicpro, sans-serif;
+    text-transform: uppercase;
+  }
+}
+
+// DEFAULT HEADINGS TO PROXIMA NOVA ON PROJECT CONTENT
+.format-paragraph {
+  h1,h2,h3,h4,h5,h6 { 
+    font-family: proxima-nova !important;
+    font-weight: 600;
+  }
+}
+
+.display-1,
+.display-2,
+.display-3,
+.display-4 {
+  line-height: 1;
+}
+
+.display-1 {
+  small {
+    font-size: 70%; letter-spacing: -3px;
+  }
+}
+
+.display-2 {
+  small {
+    font-size: 60%; letter-spacing: -2px;
+  }
+}
+
+.display-3 {
+  small {
+    font-size: 55%; letter-spacing: -2px;
+  }
+}
+
+.display-4 {
+  small {
+    font-size: 50%; letter-spacing: -1px;
+  }
+}
+
+// Columns
+.columns-split {
+  column-count: 2;
+}

@@ -1,0 +1,9 @@
+// Medium devices (tablets, less than 992px)
+@include media-breakpoint-only(md) {
+  .flexbox-container .box:first-child {
+    flex: 2;
+  }
+  .flexbox-container .navigation ul li {
+    margin: 0 15px;
+  }
+}

@@ -1,0 +1,594 @@
+@import "bootstrap";
+@import 'mixins.scss';
+@import "navigation";
+@import "typography";
+@import "buttons";
+
+.jumbotron-fluid {
+  margin:0;
+
+  &.dark {
+    background-color: $brand-black;
+    background-image: url("../images/hero3.png");
+    background-position: center 70%;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+
+    h1,h2,h3,h4,h5,h6,p,a:not(.btn){
+      color: white;
+    }
+  }
+
+  &.shift-up {
+    @include media-breakpoint-up(sm) {
+      padding: 120px 0;
+    }
+    @include media-breakpoint-up(md) {
+      padding: 250px 0 60px;
+      margin-top: -88px;
+    }
+  }
+
+  &.hero {
+    @include media-breakpoint-down(xs) {
+      text-align: center;
+      height:100vh;
+      
+      .container {
+        position: absolute;
+        top: 40%;
+      }
+    }
+  }
+
+  .copy-hero {
+    @include media-breakpoint-down(md) {
+      width: 100%;
+    }
+    @include media-breakpoint-up(md) {
+      width: 70%;
+    }
+    @include media-breakpoint-up(lg) {
+      width: 54%;
+    }
+  }
+
+  .hero-small-title {
+      margin-top: 3rem;
+  }
+
+  .gravatar.large {
+    width: 200px;
+    height: 200px;
+    padding: 100px;
+    box-shadow: 0 0 0 5px $primary;
+    @include media-breakpoint-down(xs) {
+      display: none;
+    }
+  }
+
+  .scroll {
+    margin-top: 0 !important;
+    position: absolute;
+    right: 0;
+    left: 0;
+    bottom: 5%;
+    text-align: center;
+
+    i {
+      font-size: 36px;
+      color: white;
+      opacity: 0.3;
+    }
+  }
+
+  &.hero {
+    background-color: white;
+    background-position: center top;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+}
+
+.overflow-hidden {
+  position: absolute;
+  left: 0%;
+  top: 0%;
+  right: 0%;
+  bottom: 0%;
+  z-index: 0;
+  display: block;
+  overflow: hidden;
+}
+
+
+.angle-split {
+  position: absolute;
+  left: 0%;
+  top: 0%;
+  right: 0%;
+  bottom: 0%;
+  overflow: hidden;
+  height: 700px;
+  margin-right: -40%;
+  margin-left: 60%;
+  border-left: 7px solid #e21955;
+  background-color: #070710;
+  -webkit-transform: skew(45deg, 0deg);
+  -ms-transform: skew(45deg, 0deg);
+  transform: skew(45deg, 0deg);
+}
+
+
+.pattern-bg {
+  position: relative;
+  left: -49%;
+  top: 0%;
+  bottom: auto;
+  width: 100%;
+  height: 100%;
+  border-bottom: 5px solid #e21955;
+  background-image: url("../images/hero3.png");
+  background-position: 100% 0%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  -webkit-transform: skew(-45deg, 0deg);
+  -ms-transform: skew(-45deg, 0deg);
+  transform: skew(-45deg, 0deg);
+}
+
+
+// ********* About *********
+#about {
+  background: #f7f7f9;
+  padding: 100px 0;
+
+  .copy-intro {
+    margin-top: 10px;
+
+    .c-primary {
+      color: $brand-primary;
+    }
+  }
+
+  .copy-about {
+    margin-top: 40px;
+  }
+}
+
+.gravatar {
+  border-radius: 50%;
+  height:140px;
+  width:140px;
+  margin-top: 10px;
+  display: block;
+  background: url('https://s.gravatar.com/avatar/e19387847005ca3f652b3176c370b4d1?s=280') no-repeat center center;
+  background-size: 100%;
+  transition: transform 250ms ease-in-out;
+  transform: scale(.95);
+
+  &:hover {
+    transform: scale(1);
+  }
+}
+
+// ********* What I do *********
+#what-i-do {
+  background: #f9f9f9;
+  background: -moz-linear-gradient(top, #f9f9f9 10%, #ffffff 47%);
+  background: -webkit-linear-gradient(top, #f9f9f9 10%,#ffffff 47%);
+  background: linear-gradient(to bottom, #f9f9f9 10%,#ffffff 47%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f9f9f9', endColorstr='#ffffff',GradientType=0 );
+
+  padding: 100px 0;
+
+  .flex {
+    flex: 1;
+  }
+  .card {
+    padding: 35px;
+    border: none;
+
+    img {
+      height: 65px;
+      margin: 30px auto;
+    }
+
+    .card-subtitle, p {
+      text-align: center;
+      display: block;
+      max-width: 30ch;
+      margin: 0 auto;
+    }
+
+    .card-subtitle {
+      font-size: 24px;
+      font-weight: 600;
+      padding-bottom: 15px;
+
+    }
+  }
+}
+
+.section-title {
+  width: 100%;
+  display: block;
+
+  h1,h2,h3,h4,h5,h6,p {
+    text-align: center;
+    display: block;
+    &:after {
+      text-align: center;
+      margin: $space-standard auto;
+    }
+  }
+
+  .section-subtitle {
+    font-size: 1.25rem;
+  }
+}
+
+// ********* My Process *********
+#my-process {
+  .flexbox-container {
+    height: 260px;
+    color: white;
+    align-items: center;
+    justify-content: center;
+
+    &:hover {
+      text-decoration: none;
+    }
+
+    h4 {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      align-items: center;
+      margin: 0;
+    }
+
+    .btn {
+      margin-left: $space-semi;
+    }
+  }
+}
+
+//************ Section Subdivision *********
+.container-fluid {
+  padding: 0;
+  margin: 0;
+}
+
+.section-subdivision {
+  padding-top: $space-xlarge;
+  padding-bottom: $space-xlarge;
+}
+
+//*********** Featured Project ***********
+.project--fullwidth {
+  background: #333;
+  background-position: center top;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 200px 0;
+
+  .project-title, li, p {
+    color: #fff;
+  }
+
+  .project-title {
+    font-weight: 800;
+    word-wrap: break-word;
+    -webkit-hyphens: auto;
+    -moz-hyphens: auto;
+    -ms-hyphens: auto;
+    -o-hyphens: auto;
+    hyphens: auto;
+  }
+
+  .project-tags {
+    list-style: none;
+    padding: 0;
+
+    li {
+      display: inline;
+      font-size: 10px;
+      font-weight: 600;
+      text-transform: uppercase;
+      opacity: 0.4;
+
+      &:not(:first-child) {
+        padding-left: 4px;
+
+        &::before {
+          padding-right: 8px;
+        }
+      }
+    }
+  }
+
+  .project-text {
+    margin-bottom: $space-semi;
+  }
+}
+
+
+
+
+
+// OTHER CSS FLOATING IMAGE
+.project--image-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+  -ms-flex-direction: row-reverse;
+  flex-direction: row-reverse;
+
+  img {
+    display: block;
+    width: 100%;
+  }
+}
+
+.grid-overflow {
+  float: right;
+  overflow: hidden;
+}
+
+//************ Icon Fonts *********
+.mobile-menu {
+  .icon {
+    &:before {
+      font-size: 40px;
+    }
+  }
+}
+
+
+//********* PROCESS STEPS *********
+.bg--gray {
+  background: #F9F9F9;
+}
+
+.content--container {
+  h3, .content--step-title {
+    font-weight: 700;
+
+    small {
+      text-transform: uppercase;
+    }
+  }
+
+  h4,h5 {
+    font-weight: 600;
+  }
+
+  .content--step-subtext {
+    color: $brand-primary;
+  }
+
+  .content--icon {
+    font-size: 7rem;
+    text-align: center;
+    display: block;
+    opacity: 0.2;
+  }
+
+  .content--tools,
+  .content--tools ul {
+    margin-top: 20px;
+    padding-left: 10px;
+    color: $gray-light;
+    font-size: 0.85rem;
+
+    li {
+      list-style: none;
+      line-height: $space-semi;
+    }
+
+    li:before {
+      content:"·";
+      font-size:45px;
+      vertical-align:middle;
+      margin-right: 15px;
+    }
+  }
+
+  .content--images {
+    margin-top: $space-xlarge;
+
+    @include media-breakpoint-down(sm) { 
+      img {
+        margin-bottom: 36px;
+      }
+    }
+  }
+}
+
+
+//********* Project *********
+.has-overlay {
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding-bottom: 0;
+}
+
+.introduction {
+  font-size: 26px;
+  font-weight: 300;
+  line-height: 1.8;
+  padding: 80px 0;
+  text-align: center;
+  font-family: "Merriweather";
+}
+
+.featured-image {
+  margin: 60px auto 0;
+}
+
+.content--summary {
+  padding-bottom: 40px;
+}
+
+.content--container,
+.cms-editable {
+  padding-top: 64px;
+  padding-bottom: 64px;
+}
+
+.content--title {
+  font-weight: 600;
+
+  &:not(:first-child) {
+    margin-top: 50px;
+  }
+}
+
+.cms-editable {
+  display: block;
+  text-align: center;
+
+  img {
+    margin: 0 auto; padding-bottom: 40px;
+  }
+
+  h1,h2,h3,h4,h5,h6,p {
+    padding-bottom: 20px;
+  }
+}
+
+.overlay {
+  height: 0%;
+  width: 100%;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: rgba($brand-black, 0.97);
+  overflow-y: hidden;
+  transition: 0.5s;
+
+  a {
+    padding: 8px;
+    text-decoration: none;
+    font-size: 36px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+  }
+
+  a:hover,
+  a:focus {
+    color: #f1f1f1;
+  }
+
+  .closebtn {
+    position: absolute;
+    top: 20px;
+    right: 45px;
+    font-size: 60px;
+  }
+
+  .form-group {
+    input, textarea {
+      background: $brand-black-light;
+      color: snow;
+      border: none;
+      width: 100%;
+      border-radius: 40px;
+      padding: 15px 25px;
+    }
+
+    textarea {
+      height: 170px;
+    }
+  }
+}
+
+.overlay-content {
+  position: relative;
+  top: 15%;
+  width: 100%;
+  h4 {
+    color: white;
+  }
+  form {
+    margin: 0 auto;
+    width: 500px;
+    text-align: center;
+  }
+}
+
+#success-message {
+  margin: 0 auto;
+  width: 500px;
+  display: none;
+}
+
+
+@media screen and (max-height: 450px) {
+  .overlay {
+    overflow-y: auto;
+  }
+
+  .overlay a {
+    font-size: 20px;
+  }
+
+  .overlay .closebtn {
+    font-size: 40px;
+    top: 15px;
+    right: 35px;
+  }
+}
+
+
+//********* Footer *********
+.footer-page {
+  margin:0;
+  padding: 150px 0 0;
+
+  &.dark {
+    background: $brand-black;
+  }
+
+  .btn-lg {
+    margin-bottom: 100px;
+  }
+
+  .footer--row {
+    
+    small, i {
+      color: $gray-light;
+    }
+
+    i {
+      opacity: 0.7;
+    }
+
+    .fa-heart {
+      color: $primary;
+    }
+  }
+
+  .social-media {
+    a {
+      padding-left: 20px;
+      &:hover {
+        i {
+          transition: all 0.15s ease-in-out;
+          opacity: 1;
+        }
+      }
+    }
+  }
+}
+
+
+@import "media-queries";

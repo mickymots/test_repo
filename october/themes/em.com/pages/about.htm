@@ -1,0 +1,49 @@
+title = "About"
+url = "/about"
+layout = "default"
+is_hidden = 0
+==
+<!-- <?php
+function onStart()
+{
+    $this['islight'] = true;
+}
+?> -->
+==
+{% partial "mobile-menu" %}
+{% partial "navigation-menu" %}
+
+<section class="container-fluid" id="about">
+        <div class="container">
+            <div class="row text-xs-center text-md-left">
+                <h1 class="display-4 col-md-6 col-xs-12 copy-intro decoration-line">
+                    <blockquote class="display-4 decoration-text">Allow me to introduce myself</blockquote>
+                    A bit about me
+                </h1>
+                <div class="col-md-6 col-xs-12">
+                    <span class="gravatar"></span>
+                </div>
+
+                <div class="col-md-6 col-xs-12 copy-about">
+                    <p>
+                        My name is Enok Madrid, based in Las Vegas with over 4 years of experience and I’m a perfectionist - focused on uniting simplicity, form and function in modern web applications, with a fresh touch of ui design. That’s what makes me tick.
+                    </p>
+                    <p>
+                        I’ve worked on all sorts of projects, and they all have one thing in common, that they had to sell, market and be promoted to make profits. The only way to achieve this is by going through the UX process, with focus on the user satisfaction and making sure everything is aligned with the business objectives. As much as I love design, how the product works is the most important and I achieve this by doing user research, usability testing, prototyping and reiterating the process. Every single detail matters - structure, typography, photography, proportions, colors, patterns, iconography, content, etc. Everything must be synchronized to complete the maximum user experience.
+                    </p>
+                </div>
+                <div class="col-md-6 col-xs-12 copy-about">
+                    <p class="hidden-sm-down">
+                        My strength is in the design process and front-end development. Turning pixels into beautiful, semantic HTML & CSS. I have solid experience with front-end frameworks like Foundation and Twitter Bootstrap, as well as CMS systems including Wordpress, and October cms. I also have experience working on front-end templating in collaboration with backend engineers using frameworks like Symfony 2, Laravel, and Rails. Yes, I get down on the terminal too.
+                    </p>
+                    <p class="hidden-sm-down">
+                        Beyond the web spectrum, my interests include illustrating icons and graphical assets like mascots, logos and the whole branding process. When I’m not in front of the computer, I’ll switch gears to my creative side and work on some
+                        <a target="_blank" href="http://www.airbrushlasvegas.com/enok-madrid">airbrush paintings</a> or simply plan for my next
+                        <a target="_blank" href="http://www.enok-one.com">graffiti mural</a>. I’m always into something.
+                    </p>
+                    <a class="btn btn-lg btn-outline-primary rounded-pill hasArrow __right" href="https://www.linkedin.com/in/enokmadrid" target="_blank" role="button">View Resume</a>
+                </div>
+            </div>
+        </div>
+
+</section> <!-- /container -->

@@ -1,0 +1,85 @@
+fields:
+    title:
+        label: 'enok.featuredprojects::lang.project.title'
+        oc.commentPosition: ''
+        span: auto
+        type: text
+    slug:
+        label: 'enok.featuredprojects::lang.project.slug'
+        oc.commentPosition: ''
+        span: auto
+        preset:
+            field: title
+            type: ''
+        type: text
+    hero_image:
+        label: 'Hero Image'
+        oc.commentPosition: ''
+        mode: file
+        span: auto
+        type: mediafinder
+    featured_image:
+        label: 'Featured Image'
+        span: auto
+        oc.commentPosition: ''
+        mode: file
+        type: mediafinder
+    url:
+        label: url
+        span: auto
+        type: text
+tabs:
+    fields:
+        description:
+            label: 'enok.featuredprojects::lang.project.description'
+            oc.commentPosition: ''
+            span: full
+            type: text
+            tab: 'Project Info'
+        challenge:
+            label: 'enok.featuredprojects::lang.project.challenge'
+            size: large
+            oc.commentPosition: ''
+            span: auto
+            type: textarea
+            tab: 'Project Info'
+        solution:
+            label: 'enok.featuredprojects::lang.project.solution'
+            size: large
+            oc.commentPosition: ''
+            span: auto
+            type: textarea
+            tab: 'Project Info'
+        roles:
+            label: 'Project Roles'
+            size: small
+            oc.commentPosition: ''
+            span: auto
+            type: richeditor
+            tab: 'Project Info'
+        tools:
+            label: 'Project Tools and Technologies'
+            size: small
+            oc.commentPosition: ''
+            span: auto
+            type: richeditor
+            tab: 'Project Info'
+        content:
+            label: 'enok.featuredprojects::lang.project.content'
+            size: giant
+            oc.commentPosition: ''
+            span: full
+            type: richeditor
+            tab: 'Project Info'
+        client_name:
+            label: 'enok.featuredprojects::lang.project.client_name'
+            oc.commentPosition: ''
+            span: auto
+            type: text
+            tab: 'Client Info'
+        client_description:
+            label: 'enok.featuredprojects::lang.project.client_description'
+            oc.commentPosition: ''
+            span: auto
+            type: text
+            tab: 'Client Info'

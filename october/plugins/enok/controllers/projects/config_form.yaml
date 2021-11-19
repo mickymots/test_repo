@@ -1,0 +1,11 @@
+name: Projects
+modelClass: Enok\FeaturedProjects\Models\Project
+form: $/enok/featuredprojects/models/project/fields.yaml
+defaultRedirect: enok/featuredprojects/projects
+create:
+    redirect: 'enok/featuredprojects/projects/update/:id'
+    redirectClose: enok/featuredprojects/projects
+update:
+    redirect: enok/featuredprojects/projects
+    redirectClose: enok/featuredprojects/projects
+preview: {  }

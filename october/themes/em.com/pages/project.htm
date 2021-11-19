@@ -1,0 +1,151 @@
+title = "Project Details"
+url = "/project/:slug"
+layout = "default"
+is_hidden = 0
+
+[builderDetails projectDetails]
+modelClass = "Enok\FeaturedProjects\Models\Project"
+identifierValue = "{{ :slug }}"
+modelKeyColumn = "slug"
+displayColumn = "title"
+notFoundMessage = "Oops! Project was not found"
+
+[builderList projectsList]
+modelClass = "Enok\FeaturedProjects\Models\Project"
+scope = "-"
+scopeValue = "{{ :scope }}"
+displayColumn = "slug"
+noRecordsMessage = "No records found"
+detailsPage = "project"
+detailsKeyColumn = "slug"
+detailsUrlParameter = "slug"
+pageNumber = "{{ :page }}"
+==
+<?php
+function onStart()
+{
+    $this['isDark'] = true;
+}
+?>
+==
+{% set project = projectDetails.record %}
+{% set displayColumn = projectDetails.displayColumn %}
+{% set notFoundMessage = projectDetails.notFoundMessage %}
+
+{% set projects = projectsList.records %}
+{% set displayColumn = projectsList.displayColumn %}
+{% set noRecordsMessage = projectsList.noRecordsMessage %}
+{% set detailsPage = projectsList.detailsPage %}
+{% set detailsKeyColumn = projectsList.detailsKeyColumn %}
+{% set detailsUrlParameter = projectsList.detailsUrlParameter %}
+
+{% set prevPageUrl = attribute(projects[project.id - 2], detailsUrlParameter) %}
+{% set nextPageUrl = attribute(projects[project.id], detailsUrlParameter) %}
+
+{% partial "mobile-menu" %}
+{% partial "navigation-menu" %}
+
+<div class="jumbotron jumbotron-fluid dark shift-up has-overlay" style="backgrounded-pill-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0)), url('{{ project.hero_image | media }}');">
+    <div class="container text-center">
+        {% if project %}
+        <h1 class="display-3">{{project.title}}</h1>
+        <img class="img-fluid featured-image" src="{{ project.featured_image | media }}" alt="">
+        {% else %}
+        <h1 class="display-5">{{ notFoundMessage }}</h1>
+        {% endif %}
+    </div>
+</div>
+
+<section class="container-fluid bg--gray">
+    <p class="container introduction hidden-md-down">{{project.description}}</p>
+</section>
+
+<section class="container-fluid">
+        <div class="container">
+
+            {% if project %}
+
+            <div class="row content--container">
+
+                <div class="col-md-4 content--summary">
+                    <div class="row">
+                        <div class="col-md-6 col-lg-12">
+                            <span class="content--step-subtext">My Roles</span>
+                            <div class="content--tools m-b-lg">
+                                {{project.roles | raw }}
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-lg-12">
+                            <span class="content--step-subtext">Technologies</span>
+                            <div class="content--tools">
+                                {{project.tools | raw }}
+                            </div>
+                        </div>
+
+                        <div class="col-md-12 mt-3">
+                            <a href="{{project.url}}" target="_blank" class="btn btn-sm btn-primary rounded-pill btn-space">
+                                Launch Project
+                            </a>
+                            <br>
+                            <a href="#" class="btn btn-sm btn-primary-outline rounded-pill">
+                                <i class="fa fa-share-alt"></i>
+                                Share this project
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-8 content--about">
+                    <h5 class="content--title">The Challenge</h5>
+                    {{project.challenge}}
+                    <h5 class="content--title">Getting To Work</h5>
+                    {{project.solution}}
+                </div>
+            </div>
+
+            {% else %}
+            <div class="row text-xs-center">
+                <p class="col-12">{{ notFoundMessage }}</p>
+            </div>
+            {% endif %}
+        </div>
+</section>
+
+<section class="container-fluid cms-editable format-paragraph">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                {{project.content | raw}}
+
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+
+
+
+
+<div class="flexbox-container content--menu">
+
+    <!-- Checks to see if there are more than 1 projects -->
+    {% if projects|length > 1 %} 
+        
+        <!-- Checks to see if current project is not the first, if the first then do not show Prev link -->
+        {% if project.id != projects[0].id %}
+             <a href="{{detailsPage|page({ (detailsUrlParameter): prevPageUrl  }) }}" class="flex-link btn btn-link hasArrow __left">
+                </i><span>Previous Project</span>
+            </a>
+        {% endif %}
+        
+        <!-- Checks to see if current project is not the Last, if the Last then do not show Next link -->
+        {% if project.id != projects|length %}
+             <a href="{{detailsPage|page({ (detailsUrlParameter): nextPageUrl  }) }}" class="flex-link btn btn-link hasArrow __right">
+                <span>Next Project</span>
+            </a>
+        {% endif %}
+        
+    {% endif %}
+    
+</div>

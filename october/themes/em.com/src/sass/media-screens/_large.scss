@@ -1,0 +1,6 @@
+// Large devices (desktops, less than 1200px)
+@include media-breakpoint-only(lg) {
+  .flexbox-container .box:first-child {
+    flex: 2;
+  }
+}

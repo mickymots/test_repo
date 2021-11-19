@@ -1,0 +1,77 @@
+==
+<nav class="navbar navbar-expand-lg py-3 {% if isDark %}navbar-dark{% endif %} {% if islight %}navbar-light{% endif %} {% if isSplit %}navbar-split{% endif %} z-10 fixed-top">
+    <div class="container">
+        <a class="navbar-brand text-uppercase" href="{{ 'homepage'|page }}">
+            <img class="logo" src="{{ 'assets/images/enok-logo.svg' | theme }}" alt="Enok Madrid Logo">
+            Enok Madrid
+        </a>
+        <!-- <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbars" aria-controls="navbars" aria-expanded="false" aria-label="Toggle navigation">
+            <div class="nav-icon">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </button> -->
+
+        <div class="navbar-collapse collapse">
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item {% if this.page.id == 'homepage' %}active{% endif %}">
+                <a class="nav-link" href="{{ 'homepage'|page }}">Work</a>
+            </li>
+            <li class="nav-item {% if this.page.id == 'about' %}active{% endif %}">
+                <a class="nav-link" href="{{ 'about'|page }}">About</a>
+            </li>
+            <li class="nav-item {% if this.page.id == 'process-discovery' %}active{% endif %}">
+                <a class="nav-link" href="{{ 'process-discovery'|page }}">Process</a>
+            </li>
+            <li class="nav-item {% if this.page.id == 'learn' %}active{% endif %}">
+                <a class="nav-link" href="{{ 'learn'|page }}">Training</a>
+            </li>
+            <!-- 
+            {% if not user %}
+            <li class="nav-item mr-3">
+                <a class="nav-link" href="{{ 'account'|page }}">Sign-in</a>
+            </li>
+            {% endif %} 
+            -->
+        </ul>
+        
+        {% if user %}
+        <div class="dropdown">
+          <button class="btn btn-primary rounded-pill btn-sm dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Account
+          </button>
+          <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+            <a class="dropdown-item" href="{{ 'private'|page }}"><i class="fas fa-chalkboard mr-2"></i>Training</a>
+            <a class="dropdown-item" href="{{ 'private'|page }}"><i class="fas fa-user-circle mr-2"></i>Account</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" data-request="onLogout" data-request-data="redirect: '/'" href="#"><i class="fas fa-sign-out-alt mr-2"></i>Logout</a>
+          </div>
+        </div>
+        
+        {% endif %}
+        
+        <div class="my-2 my-md-0">
+            <a href="https://goo.gl/forms/ipwbE95jv0x5FXbX2" target="_blank" class="btn btn-primary rounded-pill btn-sm">
+                <i class="fa fa-phone text-sm-center"></i> Contact me
+            </a>
+        </div>
+        </div>
+    </div>
+</nav>
+
+<div id="myNav" class="overlay">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+    <div class="overlay-content container">
+        <div class="row">
+
+            {% partial "contactForm" %}
+
+        </div>
+    </div>
+</div>
+
+<script>
+
+</script>

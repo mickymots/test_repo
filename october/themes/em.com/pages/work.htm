@@ -1,0 +1,25 @@
+title = "Work"
+url = "/work"
+layout = "default"
+is_hidden = 0
+==
+<?php
+function onStart()
+{
+    $this['islight'] = true;
+}
+?>
+==
+{% partial "mobile-menu" %}
+
+{% partial "navigation-menu" %}
+
+<div class="jumbotron jumbotron-fluid shift-up">
+    <div class="container text-xs-center">
+        <h1 class="display-3">Featured Work</h1>
+    </div>
+</div>
+
+{% partial "featured-projects" %}
+
+{# {% partial "branding" %} #}

@@ -1,0 +1,74 @@
+title = "Discovery"
+url = "/process-discovery"
+layout = "default"
+is_hidden = 0
+robot_index = "index"
+robot_follow = "follow"
+==
+<?php
+function onStart()
+{
+    $this['isDark'] = true;
+}
+?>
+==
+{% partial "mobile-menu" %}
+{% partial "navigation-menu" %}
+{% partial "process-hero" %}
+{% partial "navigation-process" %}
+
+<section class="container-fluid bg--gray">
+    <div class="container content--container">
+        <div class="row">
+            <div class="col-12 text-center">
+                <h2 class="content--step-title h1"><small>Step 1</small> Discovery</h2>
+                <i class="icon icon-binoculars content--icon"></i>
+            </div>
+            <div class="col-md-4 content--info">
+                <span class="content--step-subtext">Tools I like to use include:</span>
+                <ul class="content--tools">
+                    <li>Google Analytics</li>
+                    <li>Xtensio</li>
+                    <li>Google Docs / Draw</li>
+                    <li>Hotjar</li>
+                    <li>Peek UserTesting</li>
+                </ul>
+            </div>
+            <div class="col-md-8 content--about">
+                <h6 class="content--title">Product Data Analysis</h6>
+                <p>
+                    I begin most projects by gathering as much information possible. Interview stakeholders to uncover business goals and figure out how I’ll measure success. This allows me to grasp a solid understanding of the problems that need to be solved.
+                </p>
+                <p>
+                    If it’s an existing product, I’ll sometimes run analytics and run some user tests.
+                </p>
+                <p>
+                    Otherwise, if it’s a new product, I create user stories, scenarios, and user flows to find the best experience for the end user.
+                </p>
+            </div>
+
+            <div class="col-md-12 content--images">
+                <div class="row">
+                    <div class="col-sm-6">
+                        <img class="img-fluid d-block mx-auto" src="{{ 'assets/images/process-discovery-study-website.png' | theme }}" alt="">
+                    </div>
+                    <div class="col-sm-6">
+                        <img class="img-fluid d-block mx-auto" src="{{ 'assets/images/process-discovery-personas.png' | theme }}" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section> <!-- /container -->
+
+<div class="flexbox-container content--menu">
+    <a href="{{ 'process-exploration'|page }}" class="flex-link btn btn-link hasArrow __right">
+        <span>Next Step</span>
+    </a>
+</div>
+
+
+
+
+
+
